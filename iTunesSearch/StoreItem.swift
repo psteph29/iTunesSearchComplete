@@ -14,11 +14,20 @@ struct StoreItem: Codable, Hashable {
         case name = "trackName"
         case artist = "artistName"
         case kind
+//        kind defines the type of media the item represents
+        //    The API uses the following values for each type
+        //    Type --> String value for kind
+        //    Movie = "feature-movie"
+        //    Music = "song" or "album"
+        //    App = "software"
+        //    Book = "ebook"
         case description = "longDescription"
         case artworkURL = "artworkUrl100"
         case trackId
         case collectionId
     }
+    
+
     
     enum AdditionalKeys: String, CodingKey {
         case description = "shortDescription"
