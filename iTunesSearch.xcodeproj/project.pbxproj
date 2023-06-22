@@ -3,22 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1812E9A123F35901009BBFA7 /* StoreItemContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812E9A023F35901009BBFA7 /* StoreItemContainerViewController.swift */; };
+		1812E9A323F36978009BBFA7 /* StoreItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812E9A223F36978009BBFA7 /* StoreItemCollectionViewController.swift */; };
 		18A6051D23CF9802002037CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6051C23CF9802002037CA /* AppDelegate.swift */; };
 		18A6051F23CF9802002037CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6051E23CF9802002037CA /* SceneDelegate.swift */; };
 		18A6052423CF9802002037CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A6052223CF9802002037CA /* Main.storyboard */; };
 		18A6052623CF9803002037CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A6052523CF9803002037CA /* Assets.xcassets */; };
 		18A6052923CF9803002037CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18A6052723CF9803002037CA /* LaunchScreen.storyboard */; };
 		18A6053123CF9829002037CA /* StoreItemListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */; };
-		18A6053323CF9ADA002037CA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053223CF9ADA002037CA /* ItemCell.swift */; };
-		AB063BBA29F2E1EF006FAB73 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB063BB929F2E1EF006FAB73 /* StoreItem.swift */; };
-		AB063BBC29F2E233006FAB73 /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB063BBB29F2E233006FAB73 /* StoreItemController.swift */; };
+		18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */; };
+		18A6053523CFABBB002037CA /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053423CFABBB002037CA /* StoreItem.swift */; };
+		18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A6053623CFABDC002037CA /* StoreItemController.swift */; };
+		AB2FD3852A3E7E88000406F0 /* ItemDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2FD3842A3E7E88000406F0 /* ItemDisplaying.swift */; };
+		AB8409362A3E787D00F77AFB /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8409352A3E787D00F77AFB /* ItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1812E9A023F35901009BBFA7 /* StoreItemContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemContainerViewController.swift; sourceTree = "<group>"; };
+		1812E9A223F36978009BBFA7 /* StoreItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemCollectionViewController.swift; sourceTree = "<group>"; };
 		18A6051923CF9802002037CA /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A6051C23CF9802002037CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18A6051E23CF9802002037CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,9 +33,11 @@
 		18A6052823CF9803002037CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18A6052A23CF9803002037CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemListTableViewController.swift; sourceTree = "<group>"; };
-		18A6053223CF9ADA002037CA /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		AB063BB929F2E1EF006FAB73 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
-		AB063BBB29F2E233006FAB73 /* StoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
+		18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
+		18A6053423CFABBB002037CA /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		18A6053623CFABDC002037CA /* StoreItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemController.swift; sourceTree = "<group>"; };
+		AB2FD3842A3E7E88000406F0 /* ItemDisplaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDisplaying.swift; sourceTree = "<group>"; };
+		AB8409352A3E787D00F77AFB /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +72,15 @@
 			children = (
 				18A6052A23CF9803002037CA /* Info.plist */,
 				18A6051C23CF9802002037CA /* AppDelegate.swift */,
-				18A6053223CF9ADA002037CA /* ItemCell.swift */,
+				AB2FD3842A3E7E88000406F0 /* ItemDisplaying.swift */,
+				18A6053223CF9ADA002037CA /* ItemTableViewCell.swift */,
+				AB8409352A3E787D00F77AFB /* ItemCollectionViewCell.swift */,
 				18A6051E23CF9802002037CA /* SceneDelegate.swift */,
+				18A6053423CFABBB002037CA /* StoreItem.swift */,
+				18A6053623CFABDC002037CA /* StoreItemController.swift */,
 				18A6053023CF9829002037CA /* StoreItemListTableViewController.swift */,
-				AB063BB929F2E1EF006FAB73 /* StoreItem.swift */,
-				AB063BBB29F2E233006FAB73 /* StoreItemController.swift */,
+				1812E9A223F36978009BBFA7 /* StoreItemCollectionViewController.swift */,
+				1812E9A023F35901009BBFA7 /* StoreItemContainerViewController.swift */,
 				18A6052523CF9803002037CA /* Assets.xcassets */,
 				18A6052723CF9803002037CA /* LaunchScreen.storyboard */,
 				18A6052223CF9802002037CA /* Main.storyboard */,
@@ -102,8 +114,9 @@
 		18A6051123CF9802002037CA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					18A6051823CF9802002037CA = {
 						CreatedOnToolsVersion = 11.2.1;
@@ -146,12 +159,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18A6053323CF9ADA002037CA /* ItemCell.swift in Sources */,
-				AB063BBA29F2E1EF006FAB73 /* StoreItem.swift in Sources */,
-				AB063BBC29F2E233006FAB73 /* StoreItemController.swift in Sources */,
+				18A6053323CF9ADA002037CA /* ItemTableViewCell.swift in Sources */,
+				1812E9A323F36978009BBFA7 /* StoreItemCollectionViewController.swift in Sources */,
+				18A6053523CFABBB002037CA /* StoreItem.swift in Sources */,
+				AB8409362A3E787D00F77AFB /* ItemCollectionViewCell.swift in Sources */,
+				AB2FD3852A3E7E88000406F0 /* ItemDisplaying.swift in Sources */,
+				18A6053723CFABDC002037CA /* StoreItemController.swift in Sources */,
 				18A6053123CF9829002037CA /* StoreItemListTableViewController.swift in Sources */,
 				18A6051D23CF9802002037CA /* AppDelegate.swift in Sources */,
 				18A6051F23CF9802002037CA /* SceneDelegate.swift in Sources */,
+				1812E9A123F35901009BBFA7 /* StoreItemContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

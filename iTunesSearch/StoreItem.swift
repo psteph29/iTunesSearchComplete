@@ -1,50 +1,44 @@
-//
-//  StoreItem.swift
-//  iTunesSearch
-//
-//  Created by Paige Stephenson on 4/21/23.
-//
 
 import Foundation
 
-
-struct StoreItem: Codable {
-    var name: String
-    var artist: String
+struct StoreItem: Codable, Hashable {
+    let name: String
+    let artist: String
     var kind: String
-    var artworkURL: URL
     var description: String
+    var artworkURL: URL
+    let trackId: Int?
+    let collectionId: Int?
     
     enum CodingKeys: String, CodingKey {
         case name = "trackName"
         case artist = "artistName"
         case kind
-        case artworkURL =  "artworkUrl60"
-        case description
-        
+        case description = "longDescription"
+        case artworkURL = "artworkUrl100"
+        case trackId
+        case collectionId
     }
     
     enum AdditionalKeys: String, CodingKey {
-        case longDescription
+        case description = "shortDescription"
+        case collectionName = "collectionName"
     }
     
     init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        name = try values.decode(String.self, forKey: CodingKeys.name)
-        artist = try values.decode(String.self, forKey: CodingKeys.artist)
-        kind = try values.decode(String.self, forKey: CodingKeys.kind)
-        artworkURL = try values.decode(URL.self, forKey: CodingKeys.artworkURL)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        if let description = try? values.decode(String.self, forKey: CodingKeys.description) {
-            self.description = description
-        } else {
-            let additionalValues = try decoder.container(keyedBy: AdditionalKeys.self)
-            description = (try? additionalValues.decode(String.self, forKey: AdditionalKeys.longDescription)) ?? ""
-        }
+        self.artist = try container.decode(String.self, forKey: .artist)
+        self.kind = (try? container.decode(String.self, forKey: .kind)) ?? ""
+        self.artworkURL = try container.decode(URL.self, forKey: .artworkURL)
+        self.trackId = try? container.decode(Int.self, forKey: .trackId)
+        self.collectionId = try? container.decode(Int.self, forKey: .collectionId)
+        
+        let additionalContainer = try decoder.container(keyedBy: AdditionalKeys.self)
+        
+        self.name = (try? container.decode(String.self, forKey: .name)) ?? (try? additionalContainer.decode(String.self, forKey: .collectionName)) ?? "--"
+        self.description = (try? container.decode(String.self, forKey: .description)) ?? (try? additionalContainer.decode(String.self, forKey: .description)) ?? "--"
     }
-    
-    
-    
 }
 
 struct SearchResponse: Codable {
